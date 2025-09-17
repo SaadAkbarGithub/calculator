@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles */
+        body {
+            background: linear-gradient( 45deg, #0a0a0a, #3a4452);
+        }
+        .calculator {
+            box-shadow: 0 3px 15px rgba(113, 115, 119, 0.5);
+        }
+        .btn {
+            @apply border-0 w-16 h-16 m-2.5 rounded-full bg-transparent text-white text-xl cursor-pointer
+        }
+        .operator {
+            @apply text-[#6dee0a]
+        }
+        .equalBtn {
+            background-color: #fb7c14;
+        }
+        button {
+            box-shadow: -10px -10px 17px rgba(255, 255, 255, 0.1);
+        }
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+<body class="h-screen flex justify-between items-center mx-48">
+<div class="text-white font-serif">
+    <h1 class="text-3xl font-bold mb-4">Perform calculations with ease using our calculator.</h1>
+    <p class="text-lg">Simply input numbers and use the buttons for arithmetic operations.</p>
+</div>
+
+<!-- Calculator -->
+<div class="calculator p-5 border border-solid border-[#717377] rounded-2xl bg-transparent">
+    <!-- Calculator Display -->
+    <div class="mb-4">
+        <input type="text" class="w-80 border-0 p-6 m-2.5 bg-transparent shadow-[ 0 3px 15px rgbs(84, 84, 84, 0.1)] text-5xl text-right cursor-pointer font-medium
+         placeholder:text-white text-white" placeholder="0" id="demo">
+    </div>
+
+    <!-- Calculator Buttons -->
+    <div class="grid grid-cols-4 gap-2">
+        <!-- Number Buttons -->
+        <button class="btn operator poppins-regular">AC</button>
+        <button class="btn operator poppins-regular">DEL</button>
+        <button class="btn operator poppins-regular">%</button>
+        <button class="btn operator poppins-regular">/</button>
+
+        <button class="btn poppins-regular">7</button>
+        <button class="btn poppins-regular">8</button>
+        <button class="btn poppins-regular">9</button>
+        <button class="btn operator poppins-regular">*</button>
+
+        <button class="btn poppins-regular">4</button>
+        <button class="btn poppins-regular">5</button>
+        <button class="btn poppins-regular">6</button>
+        <button class="btn operator poppins-regular">-</button>
+
+        <button class="btn poppins-regular">1</button>
+        <button class="btn poppins-regular">2</button>
+        <button class="btn poppins-regular">3</button>
+        <button class="btn operator poppins-regular">+</button>
+
+        <button class="btn poppins-regular">00</button>
+        <button class="btn poppins-regular">0</button>
+        <button class="btn poppins-regular">.</button>
+        <button class="btn poppins-regular equalBtn">=</button>
+
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
